@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assest/css/style.css">
+    <link rel="stylesheet" href="./assest/icon/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./started.js">
+
+</head>
+<body>
+    <div id="main">
+        <div id="header">
+            <div id="logo">
+                <div class="logo-name">
+                        <a href="#">
+                            <img src="./assest/img/logo.png" alt="" class="logo-img"> 
+                        </a>
+                        <span class="logo-text">Teas <span style="color:#d38338ad;">Mingo</span></span>
+                </div>
+                <div class="search">
+                    <div class="search-item">
+                        <input type="text" class="search-input" placeholder="Search entire store here">
+                        <button class="button-search"><i class="ti-search search-icon"></i></button> <br>
+                    </div>
+                </div>
+            </div>
+            <div class="header-nav">
+
+                <ul id="nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li>
+                        <a href="/menu.html">
+                        Menu
+                    <i class="nav-arrow-down ti-angle-down"></i>
+                </a>
+                        <ul class="subnav">
+                            <li><a href="#">Tea</a></li>
+                            <li><a href="#">Cake</a></li>
+                            <li><a href="#">Book</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Where</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="slider">
+            <div class="img-slider-js">
+                <img src="./assest/img/istockphoto-1137593152-1024x1024.jpg" alt="" class="img-slider-item">
+                <img src="./assest/img/istockphoto-184104731-1024x1024.jpg" alt="" class="img-slider-item">
+            </div>
+            <i class="ti-angle-left icon-slider-left"></i>
+            <i class="ti-angle-right icon-slider-right"></i>
+            <div class="text-content">
+                <h2 class="text-heading">Teas Mingo</h2>
+                <div class="text-description">Open from 6:00 AM to 11:00 PM</div>
+                <div class="text-description1">15 Adr street, 5015</div>
+            </div>
+        </div>
+        <div class="paragraph">
+            <span class="text-paragraph">Ở Teas Mingo, mỗi chiếc bánh và cốc trà là một câu chuyện riêng với hơi thở và tinh thần chẳng thể lẫn vào đâu được. <br> <br>
+
+                Chúng mình luôn cố gắng tôn trọng tính nguyên bản, tự nhiên và chân thật nhất của từng nguyên liệu. Để dù có những bất toàn trong mỗi thứ riêng rẽ nhưng sau cùng vẫn tạo nên một chiếc bánh hài hòa giữa các nguyên liệu và một cốc trà đậm đà nhất. <br> <br>
+                
+                Vậy nên, bất cứ khi nào bạn cần những hương vị mộc mạc, tinh tế nhưng chẳng kém phần hấp dẫn, hãy đến với chúng mình. Luôn có rất nhiều những điều đặc biệt đợi bạn khám phá đó nhé!</span>
+        </div>
+        <div class="product">
+            <div class="news-product">
+                <h2 class="title-page">Sản Phẩm Sắp Ra Mắt</h2>
+                <div class="icon-new">
+                    <i class="ti-minus icon-heart"></i>
+                    <i class="ti-heart icon-heart"></i>
+                    <i class="ti-minus icon-heart"></i>
+                </div>
+            </div>
+            <div id="product-container">
+                <div class="product-item third-row">
+                    <img src="/assest/img/sphamnoibat/538b9e2ad37aa80240463afce415e8ec.jpg" alt="" class="img-item">
+                    <img src="/assest/img/sphamnoibat/67cdc1683f91f9916de003ca3c94ef57.jpg" alt="" class="img-item">
+                    <img src="/assest/img/sphamnoibat/6b35745d37d174cbe21675b5c4cbc1ef.jpg" alt="" class="img-item">
+                </div>
+                <div class="product-item third-row">
+                    <img src="/assest/img/sphamnoibat/6fe1c5185ac0cb278416a3c6ad36fb3c.jpg" alt="" class="img-item">
+                    <img src="/assest/img/sphamnoibat/731c120fa2fd930c741eaf399ffee879.jpg" alt="" class="img-item">
+                    <img src="/assest/img/sphamnoibat/9ec55ead0fb995ced552b0ee92585939.jpg" alt="" class="img-item">
+                </div>
+                <div class="product-item third-row">
+                    <img src="/assest/img/sphamnoibat/b37b97fe1eb63523ff05e1b525fdf4b3.jpg" alt="" class="img-item">
+                    <img src="/assest/img/sphamnoibat/e9e62d1a40932f312dd11e21660c7e28.jpg" alt="" class="img-item">
+                    <img src="/assest/img/sphamnoibat/d9f22ca2536e9df00612b2c22c3f5cfb.jpg" alt="" class="img-item">
+                </div>
+            </div>
+        </div>
+        <div class="best-recipes"></div>
+        <div id="footer">
+            <div class="socials-list">
+                <a href=""><i class="ti-facebook"></i></a>
+                <a href=""><i class="ti-instagram"></i></a>
+                <a href=""><i class="ti-pinterest"></i></a>
+                <a href=""><i class="ti-twitter"></i></a>
+                <a href=""><i class="ti-linkedin"></i></a>
+                <a href=""><i class="ti-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+    <script>
+        var listSliders = document.querySelectorAll('#slider>.img-slider-js>.img-slider-item');
+        console.log(listSlider);
+        var next = document.getElementsByClassName('icon-slider-left');
+        next.onclick = function() {
+            for(var i = 0; i <listSliders.length; i++) {
+                var listSlider = document.querySelector('#slider>.img-slider-js>.img-slider-item')
+            }
+        }
+    </script>
+</body>
+</html>
