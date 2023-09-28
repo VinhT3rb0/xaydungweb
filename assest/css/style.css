@@ -275,6 +275,10 @@ input:focus{
     z-index: 1;
     display: block;
 }
+.typical-left:hover {
+    background-color: #000;
+    opacity: .9;
+}
 .list-item:hover .cate-title {
     color: #769c38;
 }
@@ -296,7 +300,7 @@ input:focus{
     padding-left: 30px;
     position: absolute;
     z-index: 2;
-    top: 70%;
+    top: 65%;
     color: #fff;
     font-size: 30px;
 }
@@ -429,6 +433,35 @@ input:focus{
     overflow: hidden;
     position: relative;
     margin: 0 0 10px;
+}
+/* about */
+.about {
+    margin-top: 200px;
+}
+.about-container {
+    width: 1068px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.about-title h2{
+    width: 1068px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 30px;
+    color: #8fa382;
+}
+.about-body p {
+    color: #696969;
+    margin-top: 20px;
+    font-size: 15px;
+    text-align: justify;
+}
+.mid-about {
+    font-size: 14px;
+    font-style: italic;
+    color: #9b9a9a !important;
+    padding-left: 20px;
+    border-left: 4px solid #8fa382;
 }
 #footer {
     background-color: #8fa382;

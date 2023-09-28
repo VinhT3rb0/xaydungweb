@@ -8,15 +8,24 @@ html {
 }
 a {
     text-decoration: none;
+    cursor: pointer;
+}
+.third-row {
+    width: 33.3333%;
 }
 .col-half {
     width: 50%;
 }
-.col-third {
-    width: 33.3333%;
+.col-four {
+    width: 25%;
 }
-.sc-item {
-    margin-top: 40px;
+.row {
+    padding: 15px 16px 50px 64px;
+}
+.clear-fix {
+    display: block;
+    clear: both;
+    height: 0;
 }
 #main {
 }
@@ -31,7 +40,7 @@ a {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 2; 
+    z-index: 6; 
 }
 .logo-name {
     display: flex;
@@ -45,7 +54,7 @@ input:focus{
 }
 .logo-text {
     font-size: 30px;
-    color: #66755b;
+    color: #8fa382;
     line-height: 100px;
     margin-left: 5px;
     font-family: cursive !important;
@@ -87,7 +96,7 @@ input:focus{
     top: 0;
     left: 0;
     right: 0;
-    z-index: 2; 
+    z-index: 6; 
 }
 #nav {
     display: inline-block;
@@ -122,11 +131,13 @@ input:focus{
     background-color: #8fa382;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
+
 #nav .subnav a {
     color: #F4EEEE;
     padding: 0 12px;
     line-height: 38px ;
 }
+
 #nav .nav-arrow-down {
     font-size: 14px;
 }
@@ -136,102 +147,85 @@ input:focus{
     padding: 0 30px;
     display: block;
 }
-.product {
-    margin-top: 148px;
-    display: flex;
+.about {
+    margin-top: 200px;
 }
-.sidebar {
-    width: 20%;
+.about-container {
+    width: 1068px;
+    margin-left: auto;
+    margin-right: auto;
 }
-.cate-product {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-    padding-bottom: 30px;
-    border-bottom: solid #ccc;
-    margin-left: 40px;
-}
-.all-item {
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 2.0;
-    list-style: none;
-}
-.cate-product li a{
-    font-size: 15px;
-    line-height: 2.0;
+.about-title h2{
+    width: 1068px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 30px;
     color: #8fa382;
 }
-.cate-product li {
-    list-style: none;
+.about-body p {
+    color: #696969;
+    margin-top: 20px;
+    font-size: 15px;
+    text-align: justify;
 }
-.cate-product li :hover{
-    color: #66755b;
+.mid-about {
+    font-size: 14px;
+    font-style: italic;
+    color: #9b9a9a !important;
+    padding-left: 20px;
+    border-left: 4px solid #8fa382;
 }
-.cate-product {
+.typical-right {
+    width: 1068px;
+    margin-top: 100px;
+    margin-left: 149px;
+    margin-right: 149px;
+    display: flex;
+}
 
-}
-.item-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 35px 0;
-}
-.items {
-    display: flex;
-}
-.tea-item {
+.list-item {
+    margin-left: 20px;
     position: relative;
-    width: 100%;
-    height: 100%;
-    margin: 10px 20px;
-    border: 1px solid #83b65f;
+    margin-bottom: 20px;
 }
-.status-product {
-    font-size: 13px;
-    color: #fff;
-    display: block;
-    width: 45px;
-    height: 30px;
-    background: red;
+.featured-img {
+    position: relative;
+    padding-top: 100%;
+}
+.featured-img>a {
     position: absolute;
     top: 0;
     right: 0;
-    text-align: center;
-    line-height: 30px;
-    z-index: 1;
+    left: 0;
+    bottom: 0;
 }
-.item-img {
+.featured-img>a>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-.item-tt {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #000;
+.cate-list-title {
+    position: absolute;
+    bottom: 15px;
+    left: 25px;
 }
-.name-tea {
-    font-weight: 550;
-    font-size: 15px;
-}
-.btn-item {
-    margin-top: 10px;
+.cate-title {
+    position: relative;
     color: #fff;
-    background: #94c347;
-    padding: 10px 20px;
-    display: inline-block;
-    border-radius: 4px;
-    text-transform: uppercase;
+    font-size: 25px;
     font-weight: bold;
-    border: none;
-    cursor: pointer;
 }
-.btn-item:hover {
-    background-color: #8fa382;
+.cate-title:hover{
+    color: #72a74f;
 }
-.img-tea-item {
-    width: 300px;
-    height: 300px;
+.cate-title::before {
+    position: absolute;
+    content: "";
+    width: 35px;
+    height: 2px;
+    background: #fff;
+    left: 0;
+    top: -7px;
 }
 #footer {
     background-color: #8fa382;
