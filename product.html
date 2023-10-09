@@ -60,9 +60,9 @@
                         </div>
                         <div class="input-group">
                             <span class="input-group-btn">
-                                <button type="button" class="btn btn-default">-</button>
-                                <input class="form-control num-quantity input-lg" type="text" value="1" min="1" placeholder="Số lượng" style="text-align: center">
-                                <button type="button" class="btn btn-default">+</button>
+                                <button onclick="downPrt()" type="button" id="buy-down-js" class="btn btn-default">-</button>
+                                <input id="value-product" class="form-control num-quantity input-lg" type="text" value="1" min="1" placeholder="Số lượng" style="text-align: center">
+                                <button onclick="upPrt()" type="button" id="buy-up-js" class="btn btn-default">+</button>
                             </span>
                             <a class="btn-buy-cart" href="">
                                 <i class="ti-shopping-cart btn-default icon-cart">Thêm vào giỏ</i>
@@ -105,6 +105,64 @@
                 <a href=""><i class="ti-youtube"></i></a>
             </div>
         </div>
+        <div class="modal js-modal">
+            <div class="modal-container js-modal-container">
+                <div class="modal-close js-modal-close">
+                    <i class="ti-close"></i>
+                </div>
+                <header class="modal-header">
+                    <i class="modal-heading-icon ti-bag">
+                        Tickets
+                    </i>
+                </header>
+                <div class="modal-body">
+                    <label for="ticket-quantity" class="modal-lable">
+                        <i class="ti-shopping-cart"></i>
+                        Tickets, $15 per person
+                    </label>
+                    <input id="ticket-quantity" required type="text" class="modal-input" placeholder="How many?">
+    
+                    <label for="send-email" class="modal-lable">
+                        <i class="ti-user"></i>
+                        Send to
+                    </label>
+                    <input id="send-email" type="email" required class="modal-input" placeholder="Enter email...">
+                    <button id="buy-ticket">
+                        Pay <i class="ti-check"></i>
+                    </button>
+                </div>
+                <footer class="modal-footer">
+                    <p class="modal-help">Need <a href="#">help?</a></p>
+                </footer>
+            </div>
+        </div>
     </div>
+    <script>
+        var valueProduct = parseFloat(document.getElementById('value-product').value);
+        if(valueProduct===null) {
+            valueProduct=1;
+        }
+        function downPrt() {
+        var valueProduct = parseFloat(document.getElementById('value-product').value);
+            valueProduct -=1;
+            if(valueProduct<=0)
+                valueProduct=1;
+            document.getElementById('value-product').value= valueProduct;
+        }
+        function upPrt() {
+        var valueProduct = parseFloat(document.getElementById('value-product').value);
+            valueProduct +=1;
+            document.getElementById('value-product').value= valueProduct;
+
+        }
+
+
+        var modal = document.getElementsByClassName('.btn-buy-cart');
+        console.log(modal);
+        var openModal = document.querySelector('btn-default');
+        openModal.onclick = function() {
+            modal.classList.add('open');
+        }
+    </script>
 </body>
 </html>

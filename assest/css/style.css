@@ -273,7 +273,6 @@ input:focus{
     background: #4d4c4c;
     opacity: .5;
     z-index: 1;
-    display: block;
 }
 .typical-left:hover {
     background-color: #000;
@@ -416,10 +415,7 @@ input:focus{
     position: relative;
 }
 .title-blogs-item {
-    height: unset;
     margin: 0 0 10px;
-    display: block;
-    overflow: hidden;
 }
 .title-blogs-item a {
     font-size: 14px;
