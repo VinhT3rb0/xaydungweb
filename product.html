@@ -65,7 +65,9 @@
                                 <button onclick="upPrt()" type="button" id="buy-up-js" class="btn btn-default">+</button>
                             </span>
                             <a class="btn-buy-cart" href="">
-                                <i class="ti-shopping-cart btn-default icon-cart">Thêm vào giỏ</i>
+                                <button class="btn-buy-product">
+                                    <i class="ti-shopping-cart icon-cart"></i>Thêm vào giỏ
+                                </button>
                             </a>
                         </div>
                     </div>
@@ -112,21 +114,26 @@
                 </div>
                 <header class="modal-header">
                     <i class="modal-heading-icon ti-bag">
-                        Tickets
+                        Order
                     </i>
                 </header>
                 <div class="modal-body">
                     <label for="ticket-quantity" class="modal-lable">
-                        <i class="ti-shopping-cart"></i>
-                        Tickets, $15 per person
+                        <i class="ti-mobile"></i>
+                        Nhập số điện thoại
                     </label>
-                    <input id="ticket-quantity" required type="text" class="modal-input" placeholder="How many?">
+                    <input id="ticket-quantity" required type="number" class="modal-input" placeholder="Enter your phone number...">
     
                     <label for="send-email" class="modal-lable">
                         <i class="ti-user"></i>
-                        Send to
+                        Tên của bạn
                     </label>
-                    <input id="send-email" type="email" required class="modal-input" placeholder="Enter email...">
+                    <input id="send-email" type="text" required class="modal-input" placeholder="Enter your name...">
+                    <label for="send-address" class="modal-lable">
+                        <i class="ti-home"></i>
+                        Địa chỉ
+                    </label>
+                    <input id="send-address" type="text" required class="modal-input" placeholder="Enter your address...">
                     <button id="buy-ticket">
                         Pay <i class="ti-check"></i>
                     </button>
@@ -137,32 +144,6 @@
             </div>
         </div>
     </div>
-    <script>
-        var valueProduct = parseFloat(document.getElementById('value-product').value);
-        if(valueProduct===null) {
-            valueProduct=1;
-        }
-        function downPrt() {
-        var valueProduct = parseFloat(document.getElementById('value-product').value);
-            valueProduct -=1;
-            if(valueProduct<=0)
-                valueProduct=1;
-            document.getElementById('value-product').value= valueProduct;
-        }
-        function upPrt() {
-        var valueProduct = parseFloat(document.getElementById('value-product').value);
-            valueProduct +=1;
-            document.getElementById('value-product').value= valueProduct;
-
-        }
-
-
-        var modal = document.getElementsByClassName('.btn-buy-cart');
-        console.log(modal);
-        var openModal = document.querySelector('btn-default');
-        openModal.onclick = function() {
-            modal.classList.add('open');
-        }
-    </script>
+    <script src="./product.js"></script>
 </body>
 </html>

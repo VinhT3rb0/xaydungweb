@@ -41,15 +41,24 @@
                             <li><a href="#">Book</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Where</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="#">Order</a></li>
                 </ul>
             </div>
         </div>
-        <div id="slider">
-            <div class="img-slider-js">
-                <img src="./assest/img/istockphoto-1137593152-1024x1024.jpg" alt="" class="img-slider-item">
-                <img src="./assest/img/istockphoto-184104731-1024x1024.jpg" alt="" class="img-slider-item">
+        <div class="slider">
+            <div class="slider-wrapper">
+                <div class="slider-main">
+                    <div class="slider-item">
+                        <img src="/assest/img/tea-time-3240766_1280.jpg" alt="">
+                    </div>
+                    <div class="slider-item">
+                        <img src="./assest/img/istockphoto-1137593152-1024x1024.jpg" alt="">
+                    </div>
+                    <div class="slider-item">
+                        <img src="./assest/img/istockphoto-184104731-1024x1024.jpg" alt="">
+                    </div>
+                </div>
             </div>
             <i class="ti-angle-left icon-slider-left"></i>
             <i class="ti-angle-right icon-slider-right"></i>
@@ -249,15 +258,6 @@
             </div>
         </div>
     </div>
-    <script>
-        var listSliders = document.querySelectorAll('#slider>.img-slider-js>.img-slider-item');
-        console.log(listSlider);
-        var next = document.getElementsByClassName('icon-slider-left');
-        next.onclick = function() {
-            for(var i = 0; i <listSliders.length; i++) {
-                var listSlider = document.querySelector('#slider>.img-slider-js>.img-slider-item')
-            }
-        }
-    </script>
+    <script src="started.js"></script>
 </body>
 </html>

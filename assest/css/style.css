@@ -147,53 +147,68 @@ input:focus{
     padding: 0 30px;
     display: block;
 }
-#slider {
-    margin-top: 148px;
+.slider {
+    max-width: 1366px;
+    position: relative;
+}
+.slider-wrapper {
     width: 100%;
-    padding-top: 50%;
-    background: url('/assest/img/tea-time-3240766_1280.jpg') top center / cover no-repeat;
-    position: relative; 
-} 
-.img-slider-js {
-    display: none;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    
 }  
-#slider .text-content {
+.slider-main {
+    display: flex;
+    position: relative;
+    transition: transform 0.25s linear;
+}
+.slider-item {
+    width: 100%;
+    height: 100%;
+    flex: 1 0 100%;
+    user-select: none;
+}
+.slider-item img {
+    width: 100%;
+}
+.slider .text-content {
     position: absolute;
     bottom: 47px;
     color: #fff;
     width: 100%;
     /* text-align: center; */
 }
-#slider .icon-slider-left {
+.slider .icon-slider-left {
     position: absolute;
     top: 50%;
     color: #fff;
     font-size: 35px;
     left: 0;
 }
-#slider .icon-slider-right {
+.slider .icon-slider-right {
     right: 0;
     position: absolute;
     top: 50%;
     color: #fff;
     font-size: 35px;
 }
-#slider .icon-slider-left:hover,
-#slider .icon-slider-right:hover {
+.slider .icon-slider-left:hover,
+.slider .icon-slider-right:hover {
     color: #000;
     cursor: pointer;
 }
-#slider .text-heading {
+.slider .text-heading {
     text-align: center;
     font-weight: 500;
     font-size: 30px;
 }
-#slider .text-description {
+.slider .text-description {
     font-size: 20px;
     margin-top: 20px;
     margin-left: 10px;
 }
-#slider .text-description1 {
+.slider .text-description1 {
     font-size: 20px;    
     text-align: right;
     margin-top: -20px;

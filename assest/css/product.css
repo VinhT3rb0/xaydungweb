@@ -199,13 +199,23 @@ input:focus{
     z-index: 2;
     margin-bottom: 0;
 }
-.btn-default {
+.btn-buy-product {
     color: #fff;
     background-color: #a1c347;
     border: 0 !important;
     padding: 10px 15px;
     font-size: 14px;
     border-radius: 0;
+    cursor: pointer;
+    border-radius: 0.2em;
+}
+.btn-default {
+    color: #fff;
+    background-color: #a1c347;
+    border: 0 !important;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 0.2em;
     cursor: pointer;
 }
 .icon-cart {
@@ -286,7 +296,7 @@ input:focus{
     align-items: center;
     justify-content: center;
     display: none;
-    z-index: 3;
+    z-index: 11;
 }
 
 .modal.open {
