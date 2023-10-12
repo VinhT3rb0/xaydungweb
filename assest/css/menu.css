@@ -80,6 +80,8 @@ input:focus{
     cursor: pointer;
 }
 .header-nav {
+    display: flex;
+    justify-content: space-between;
     margin-top: 102px;
     height: 46px;
     background-color: #8fa382;
@@ -135,6 +137,20 @@ input:focus{
     line-height: 46px;
     padding: 0 30px;
     display: block;
+}
+.login {
+    margin-right: 60px;
+}
+.login p {
+    line-height: 46px;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #fff;
+    padding: 0 20px;
+}
+.login :hover {
+    background-color: #d38338ad;
+    cursor: pointer;
 }
 .product {
     margin-top: 148px;
@@ -234,26 +250,72 @@ input:focus{
     height: 300px;
 }
 #footer {
-    background-color: #8fa382;
-    padding: 32px 16px;
+    background: url('/assest/img/111.jpg');
     text-align: center;
+    position: relative;
+    opacity: 0.8;
 }
-.socials-list {
-    font-size: 24px;
+.footer-container {
+    display: flex;
+    width: 1170px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
 }
-.socials-list a {
-    color: rgba(255, 255, 255, 0.815);
-    text-decoration: none;
+.item-block {
+    float: left;
+    width: 33.3333%;
+    position: relative;
+    display: block;
+    border-right: 1px dashed #e1e1e1;
+    padding-left: 25px;
+    z-index: 1;
+    min-height: 210px;
+    margin-top: 60px;
 }
-.socials-list a:hover,
-.copyright a:hover {
-    color: #d38338ad;
-
+.menu-footer {
+    width: 100%;
+    float: left;
+    position: relative;
+    display: inline-block;
 }
-.copyright {
-    margin-top: 15px;
-    color: rgba(255, 255, 255, 0.815);
+.menu-footer a:hover {
+    color: #94c347;
+    text-decoration: underline;
 }
-.copyright a {
-    color: #d38338ad;
+.title-menu-footer {
+    color: #94c347;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin: 0;
+    text-align: left;
+}
+.title-menu-footer::before {
+    content: "";
+    top: 30px;
+    left: 0;
+    position: absolute;
+    height: 2px;
+    width: 20px;
+    background: #94c347;
+    opacity: 1;
+}
+.list-menu {
+    margin-top: 20px;
+    list-style: square;
+    color: #fff;
+}
+.list-menu li {
+    text-align: left;
+    font-size: 13px;
+    padding: 10px 20px;
+    line-height: 20px;
+    padding-left: 17px;
+}
+.list-menu li a {
+    color: #fff;
+}
+.list-menu li i {
+    color: #fff;
 }

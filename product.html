@@ -13,10 +13,10 @@
         <div id="header">
             <div id="logo">
                 <div class="logo-name">
-                        <a href="./index.html">
-                            <img src="./assest/img/logo.png" alt="" class="logo-img"> 
-                        </a>
-                        <span class="logo-text">Teas <span style="color:#d38338ad;">Mingo</span></span>
+                    <a href="#">
+                        <img src="./assest/img/logo.png" alt="" class="logo-img">
+                    </a>
+                    <span class="logo-text">Teas <span style="color:#d38338ad;">Mingo</span></span>
                 </div>
                 <div class="search">
                     <div class="search-item">
@@ -28,22 +28,25 @@
             <div class="header-nav">
 
                 <ul id="nav">
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="./index.html">Trang chủ</a></li>
+                    <li><a href="./about.html">Giới thiệu</a></li>
                     <li>
                         <a href="/menu.html">
-                        Menu
-                    <i class="nav-arrow-down ti-angle-down"></i>
-                </a>
+                            Menu
+                            <i class="nav-arrow-down ti-angle-down"></i>
+                        </a>
                         <ul class="subnav">
-                            <li><a href="#">Tea</a></li>
-                            <li><a href="#">Cake</a></li>
-                            <li><a href="#">Book</a></li>
+                            <li><a href="#">Trà</a></li>
+                            <li><a href="#">Bánh</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Where</a></li>
+                    <li><a href="./contact.html">Liên hệ</a></li>
+                    <li><a href="#">Đặt hàng</a></li>
                 </ul>
+                <div class="login">
+                    <p class="show-login">Đăng Nhập</p>
+                    <p class="show-cart">Giỏ hàng</p>
+                </div>
             </div>
         </div>
         <div class="content">
@@ -53,24 +56,19 @@
                         <img src="./assest/img/greentea/d385ce2cabe96a724807459a4190ea42.jpg" alt="">
                     </div>
                     <div class="text-product">
+                        <img src="./assest/img/greentea/d385ce2cabe96a724807459a4190ea42.jpg" alt="">
                         <h2 class="title-product">Trà xanh</h2>
-                        <div class="price">100,000 ₫</div>
+                        <div class="price">100.000</div>
                         <div class="decrible">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla delectus temporibus sed enim culpa nobis, praesentium obcaecati ex repellendus iusto eaque magni deleniti dolore reiciendis, cum laborum facere vitae.</p>                     
                         </div>
-                        <div class="input-group">
                             <span class="input-group-btn">
                                 <button onclick="downPrt()" type="button" id="buy-down-js" class="btn btn-default">-</button>
                                 <input id="value-product" class="form-control num-quantity input-lg" type="text" value="1" min="1" placeholder="Số lượng" style="text-align: center">
                                 <button onclick="upPrt()" type="button" id="buy-up-js" class="btn btn-default">+</button>
                             </span>
-                            <a class="btn-buy-cart" href="">
-                                <button class="btn-buy-product">
-                                    <i class="ti-shopping-cart icon-cart"></i>Thêm vào giỏ
-                                </button>
-                            </a>
+                            <button class="btn-buy-product">Thêm vào giỏ</button>
                         </div>
-                    </div>
                 </div>
                 <ul class="categori">
                     <li><a style="font-size: 20px; font-weight: 700; padding: 10px 0; border-bottom: 1px solid #696969;" href="">Categories</a></li>
@@ -98,13 +96,40 @@
             </div>
         </div>
         <div id="footer">
-            <div class="socials-list">
-                <a href=""><i class="ti-facebook"></i></a>
-                <a href=""><i class="ti-instagram"></i></a>
-                <a href=""><i class="ti-pinterest"></i></a>
-                <a href=""><i class="ti-twitter"></i></a>
-                <a href=""><i class="ti-linkedin"></i></a>
-                <a href=""><i class="ti-youtube"></i></a>
+            <div class="footer-container">
+                <div class="item-block">
+                    <div class="menu-footer">
+                        <h4 class="title-menu-footer">NEWS</h4>
+                        <ul class="list-menu">
+                            <li><a href="">About Us</a></li>
+                            <li><a href="">Sale</a></li>
+                            <li><a href="">Management</a></li>
+                            <li><a href="">Security</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item-block">
+                    <div class="menu-footer">
+                        <h4 class="title-menu-footer">Information</h4>
+                        <ul class="list-menu">
+                            <li><a href="">Returns</a></li>
+                            <li><a href="">Delivery</a></li>
+                            <li><a href="">Services</a></li>
+                            <li><a href="">Gift Cards</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item-block" style="border: none;"> 
+                    <div class="menu-footer">
+                        <h4 class="title-menu-footer">Find Us</h4>
+                        <ul class="list-menu">
+                            <li><i class="ti-facebook"><a href=""></i> Facebook</a></li>
+                            <li><i class="ti-instagram"><a href=""></i> Instagram</a></li>
+                            <li><i class="ti-google"><a href=""></i> Google</a></li>
+                            <li><i class="ti-twitter"><a href=""></i> Twitter</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="modal js-modal">
@@ -134,13 +159,54 @@
                         Địa chỉ
                     </label>
                     <input id="send-address" type="text" required class="modal-input" placeholder="Enter your address...">
-                    <button id="buy-ticket">
-                        Pay <i class="ti-check"></i>
+                    <button class="buy-ticket-js" id="buy-ticket">
+                        Đăng Nhập <i class="ti-check"></i>
                     </button>
                 </div>
                 <footer class="modal-footer">
                     <p class="modal-help">Need <a href="#">help?</a></p>
                 </footer>
+            </div>
+        </div>
+        <div class="cart">
+            <div class="cart-container">
+                <div class="cart-close">
+                    <i class="ti-close icon-close"></i>
+                </div>
+                <header class="cart-header">
+                    <i class="ti-shopping-cart-full cart-icon"> Giỏ hàng</i>
+                </header>
+                <div class="cart-body">
+                    <section class="cart-item">
+                        <form action="">
+                            <table>
+                                <thead>
+                                    <tr style="font-size: 15px;">
+
+                                        <th>Sản phẩm</th>
+                                        <th>Giá</th>
+                                        <th>SL</th>
+                                        <th>Chọn</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- <tr>
+                                        <td style="display: flex; flex-direction: column;align-items: center; width: 100px;"><img class="cart-img" src="./assest/img/greentea/d385ce2cabe96a724807459a4190ea42.jpg" alt="">Trà Xanh</td>
+                                        <td><p><span>100.000</span><sup>đ</sup></p></td>
+                                        <td><input style="width: 40px;" type="number" value="1" min="0"></td>
+                                        <td style="cursor: pointer;">Xóa</td>
+                                    </tr> -->
+                                </tbody>
+                            </table>
+                            <div class="price-total">
+                                <p style="font-weight: bold;">Tổng tiền: <span>0</span><sup>đ</sup></p>
+                            </div>
+                        </form>
+                    </section>
+                    <div class="pay">
+                        <button class="btn-pay">Thanh Toán</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
