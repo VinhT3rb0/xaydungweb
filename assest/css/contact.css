@@ -6,9 +6,86 @@
 html {
     font-family: monospace;
 }
+p {
+    margin-bottom: 8px;
+}
 a {
     text-decoration: none;
     cursor: pointer;
+}
+form {
+    display: block;
+    margin-top: 0em;
+}
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+    cursor: default;
+    font-family: Arial, Helvetica, sans-serif;
+}
+input {
+    font-family: inherit;
+    margin: 0;
+    font: inherit;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: Locical;
+    cursor: text;
+}
+input[type="text" i] {
+    writing-mode: horizontal-tb !important;
+    padding-block: 1px;
+    padding-inline: 2px;
+}
+textarea {
+    font-family: inherit;
+    overflow: auto;
+    margin: 0;
+    font: inherit;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: Locical;
+    cursor: text;
+    resize: auto;
+    white-space-collapse: preserve;
+    text-wrap: wrap;
+    overflow-wrap: break-word;
+    column-count: initial !important;
+    writing-mode: horizontal-tb !important;
+}
+button {
+    -webkit-appearance: button;
+    font-family: inherit;
+    text-transform: none;
+    overflow: visible;
+    margin: 0;
+    font: inherit;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-indent: 0px;
+    text-shadow: none;
+    writing-mode: horizontal-tb !important;
+    padding-block: 1px;
+    padding-inline: 6px;
+}
+iframe {
+    overflow-clip-margin: content-box !important;
+    overflow: clip !important;
 }
 .third-row {
     width: 33.3333%;
@@ -162,6 +239,93 @@ input:focus{
 .login :hover {
     background-color: #d38338ad;
     cursor: pointer;
+}
+.main-body {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+.contact-title h1 {
+    margin-top: 150px;
+    margin-bottom: 10px;
+    color: #575859;
+    font-size: 28px;
+    font-family: sans-serif;
+    font-weight: 700;
+    text-align: left;
+}
+.left {
+    width: 100%;
+    margin-right: 50px;
+}
+.main-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    display: flex;
+}
+.form-header {
+    padding-bottom: 9px;
+    margin: 40px 0 20px;
+    border-bottom: 1px solid #eee;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: inherit;
+    display: block;
+}
+.form-item {
+    margin-bottom: 15px;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.btn {
+    color: #333;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-color: #0e0e0e;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+    border-radius: 4px;
+}
+.right {
+    width: 100%;
+    margin-left: 50px;
+}
+.info-form {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
 }
 #footer {
     background: url('/assest/img/111.jpg');
