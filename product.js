@@ -65,26 +65,51 @@ var valueProduct = parseFloat(document.getElementById('value-product').value);
         }})
         function addcart(productImg,productName,productPrice) {
             var addtr = document.createElement("tr")
+            var cartItem = document.querySelectorAll("tbody tr")
+            for(var i=0;i<cartItem.length;i++) {
+                var productMain = document.querySelectorAll('.title-name')
+                if(productMain[i].innerHTML === productName) {
+                    alert("Sản phẩm đã có trong giỏ hàng")
+                    return
+                }
+            }
              valueProduct = parseFloat(document.getElementById('value-product').value);
-            var trcontent = '<tr><td style="display: flex; flex-direction: column;align-items: center; width: 100px;"><img class="cart-img" src="'+productImg+'" alt="">'+productName+'</td><td><p><span>'+productPrice+'</span><sup>đ</sup></p></td><td><input style="width: 40px;" type="number" value="'+valueProduct+'" min="0"></td><td style="cursor: pointer;">Xóa</td></tr>'
+            var trcontent = '<tr><td style="display: flex; flex-direction: column;align-items: center; width: 100px;"><img class="cart-img" src="'+productImg+'" alt=""><span class="title-name">'+productName+'</span></td><td><p><span class="price-title">'+productPrice+'</span><sup>đ</sup></p></td><td><input style="width: 40px;" type="number" value="'+valueProduct+'" min="0"></td><td style="cursor: pointer;"><span class="cart-del">Xóa</span></td></tr>'
             addtr.innerHTML = trcontent
             var cartTable = document.querySelector("tbody")
             cartTable.append(addtr)
             cartTotal()
+            deleteCart()
         }
+
+
+        // xóa sản phẩm trong giỏ
+        function deleteCart() {
+            var cartItem =document.querySelectorAll("tbody tr")
+            for(var i=0;i<cartItem.length;i++) {
+                var productDelete = document.querySelectorAll('.cart-del')
+                productDelete[i].addEventListener('click',function(event) {
+                    var cartDelete = event.target
+                    var cartItemR = cartDelete.parentElement.parentElement
+                    cartItemR.remove()
+                })
+            }
+        }
+
+
+
         // tính tổng tiền
         function cartTotal() {
             var cartItem = document.querySelectorAll("tbody tr")
             var totalB = 0
             for(var i=0;i<cartItem.length;i++) {
                 var inputValue = cartItem[i].querySelector("input").value
-                var productPrice = cartItem[i].querySelector("span").innerHTML
+                var productPrice = cartItem[i].querySelector(".price-title").innerHTML
                 var totalPrice = inputValue * productPrice*1000
                 totalB += totalPrice
                 bill = totalB.toLocaleString('de-DE')
             }
             var totalBill = document.querySelector('.price-total span')
             totalBill.innerHTML = bill
-            console.log(totalBill);
         }
 
