@@ -149,6 +149,21 @@ input:focus{
     padding: 0 30px;
     display: block;
 }
+.contact-title {
+    height: 100px;
+    background: url(/assest/img/slide2.jpg);
+}
+.contact-title h1 {
+    margin-top: 148px;
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 24px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 100px;
+    text-align: center;
+}
 .login {
     display: flex;
     margin-right: 60px;
@@ -163,9 +178,6 @@ input:focus{
 .login :hover {
     background-color: #d38338ad;
     cursor: pointer;
-}
-.content {
-    margin-top: 148px;
 }
 .col {
     display: flex;

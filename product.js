@@ -92,6 +92,7 @@ var valueProduct = parseFloat(document.getElementById('value-product').value);
                     var cartDelete = event.target
                     var cartItemR = cartDelete.parentElement.parentElement
                     cartItemR.remove()
+                    cartTotal()
                 })
             }
         }
@@ -107,9 +108,18 @@ var valueProduct = parseFloat(document.getElementById('value-product').value);
                 var productPrice = cartItem[i].querySelector(".price-title").innerHTML
                 var totalPrice = inputValue * productPrice*1000
                 totalB += totalPrice
-                bill = totalB.toLocaleString('de-DE')
             }
             var totalBill = document.querySelector('.price-total span')
-            totalBill.innerHTML = bill
+            totalBill.innerHTML = totalB.toLocaleString('de-DE')
+            inputChange()
         }
 
+function inputChange() {
+    var cartItem =document.querySelectorAll("tbody tr")
+    for(var i=0;i<cartItem.length;i++) {
+        var inputValue = cartItem[i].querySelector('input')
+        inputValue.addEventListener("change", function() {
+            cartTotal()
+        })
+    }
+}

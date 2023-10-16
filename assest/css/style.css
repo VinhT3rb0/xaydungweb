@@ -293,7 +293,7 @@ input:focus{
     background-color: #000;
     padding-top: 40%;
     position: relative;
-    background:url('./assest/img/greentea/066835380a9ddd3db19f2532c22c15f2.jpg') top center / cover no-repeat;
+    background:url('/assest/img/greentea/066835380a9ddd3db19f2532c22c15f2.jpg') top center / cover no-repeat;
 }
 .typical-left::before {
     position: absolute;
