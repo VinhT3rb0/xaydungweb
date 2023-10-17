@@ -165,6 +165,22 @@ input:focus{
 .login :hover {
     background-color: #d38338ad;
     cursor: pointer;
+    
+}
+.contact-title {
+    height: 100px;
+    background: url(/assest/img/slide2.jpg);
+}
+.contact-title h1 {
+    margin-top: 148px;
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 24px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 100px;
+    text-align: center;
 }#footer {
     background: url('/assest/img/111.jpg');
     text-align: center;
@@ -236,7 +252,7 @@ input:focus{
     color: #fff;
 }
 .cart {
-    margin-top: 150px;
+    margin-top: 46px;
     width: 100%;
     height: 100%;
     top: 0;
@@ -244,7 +260,7 @@ input:focus{
     bottom: 0;
     align-items: center;
     justify-content: right;
-    display: none;
+    display: flex;
     z-index: 11;
 }
 .cart-container {
