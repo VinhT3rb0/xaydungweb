@@ -66,7 +66,7 @@ var valueProduct = parseFloat(document.getElementById('value-product').value);
             var productPrice = product.querySelector(".price").innerText
             localStorage.setItem('name', JSON.stringify(productName))
             localStorage.setItem('img', JSON.stringify(productImg))
-            localStorage.setItem('price', JSON.parse(productPrice))
+            localStorage.setItem('price', JSON.stringify(productPrice))
             addcart(productImg,productName,productPrice)
         }})
         function addcart(productImg,productName,productPrice) {
@@ -117,6 +117,7 @@ var valueProduct = parseFloat(document.getElementById('value-product').value);
             }
             var totalBill = document.querySelector('.price-total span')
             totalBill.innerHTML = totalB.toLocaleString('de-DE')
+            localStorage.setItem('totalBill', JSON.stringify(totalB))
             inputChange()
         }
 
