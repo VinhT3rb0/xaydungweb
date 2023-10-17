@@ -1,6 +1,7 @@
 var valueProduct = parseFloat(document.getElementById('value-product').value);
         if(valueProduct===null) {
             valueProduct=1;
+            localStorage.setItem('value', JSON.stringify(valueProduct))
         }
         function downPrt() {
             valueProduct = parseFloat(document.getElementById('value-product').value);
@@ -8,13 +9,15 @@ var valueProduct = parseFloat(document.getElementById('value-product').value);
             if(valueProduct<=0)
                 valueProduct=1;
             document.getElementById('value-product').value= valueProduct;
+            localStorage.setItem('value', JSON.stringify(valueProduct))
         }
         function upPrt() {
             valueProduct = parseFloat(document.getElementById('value-product').value);
             valueProduct +=1;
             document.getElementById('value-product').value= valueProduct;
-
+            localStorage.setItem('value', JSON.stringify(valueProduct))
         }
+
 
         // mở đăng nhập
         const showLogin = document.querySelector('.show-login')
@@ -61,6 +64,9 @@ var valueProduct = parseFloat(document.getElementById('value-product').value);
             var productImg = product.querySelector("img").src;
             var productName = product.querySelector(".title-product").innerText
             var productPrice = product.querySelector(".price").innerText
+            localStorage.setItem('name', JSON.stringify(productName))
+            localStorage.setItem('img', JSON.stringify(productImg))
+            localStorage.setItem('price', JSON.parse(productPrice))
             addcart(productImg,productName,productPrice)
         }})
         function addcart(productImg,productName,productPrice) {
@@ -123,3 +129,10 @@ function inputChange() {
         })
     }
 }
+const productInfo = {
+    
+}
+
+console.log(productInfo.img);
+console.log(productInfo.count);
+
