@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./assest/css/contact.css">
+    <link rel="stylesheet" href="./assest/css/buy.css">
 </head>
 <body>
     <div id="main">
@@ -26,7 +26,7 @@
             <div class="header-nav">
 
                 <ul id="nav">
-                    <li><a href="#">Trang chủ</a></li>
+                    <li><a href="index.html">Trang chủ</a></li>
                     <li><a href="about.html">Giới thiệu</a></li>
                     <li>
                         <a href="/menu.html">
@@ -47,6 +47,49 @@
             </div>
         </div>
         <div class="slider"></div>
+        <div class="cart">
+            <div class="cart-container">
+                <div class="cart-close">
+                    <i class="ti-close icon-close"></i>
+                </div>
+                <header class="cart-header">
+                    <i class="ti-shopping-cart-full cart-icon"> Giỏ hàng</i>
+                </header>
+                <div class="cart-body">
+                    <section class="cart-item">
+                        <form action="/buy.html">
+                            <table>
+                                <thead>
+                                    <tr style="font-size: 15px;">
+
+                                        <th>Sản phẩm</th>
+                                        <th>Giá</th>
+                                        <th>SL</th>
+                                        <th>Chọn</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- <tr>
+                                        <td style="display: flex; flex-direction: column;align-items: center; width: 100px;"><img class="cart-img" src="./assest/img/greentea/d385ce2cabe96a724807459a4190ea42.jpg" alt="">Trà Xanh</td>
+                                        <td><p><span>100.000</span><sup>đ</sup></p></td>
+                                        <td><input style="width: 40px;" type="number" value="1" min="0"></td>
+                                        <td style="cursor: pointer;">Xóa</td>
+                                    </tr> -->
+                                </tbody>
+                            </table>
+                            <div class="price-total">
+                                <p style="font-weight: bold;">Tổng tiền: <span>0</span><sup>đ</sup></p>
+                            </div>
+                        </form>
+                    </section>
+                    <form action="/buy.html">
+                        <div class="pay">
+                            <button type="submit" formaction="/buy.html" class="btn-pay">Thanh Toán</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
         <div id="footer">
             <div class="footer-container">
                 <div class="item-block">
@@ -85,6 +128,6 @@
             </div>
         </div>
     </div>
-    <script src="started.js"></script>
+    <script src="./product.js"></script>
 </body>
 </html>
