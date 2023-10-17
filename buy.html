@@ -67,12 +67,12 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <!-- <tr>
-                                        <td style="display: flex; flex-direction: column;align-items: center; width: 100px;"><img class="cart-img" src="./assest/img/greentea/d385ce2cabe96a724807459a4190ea42.jpg" alt="">Trà Xanh</td>
-                                        <td><p><span>100.000</span><sup>đ</sup></p></td>
-                                        <td><input style="width: 40px;" type="number" value="1" min="0"></td>
+                                    <tr>
+                                        <td class="title-product" style="display: flex; flex-direction: column;align-items: center; width: 100px;"><img class="cart-img" id="pic" src="" alt=""><p></p></td>
+                                        <td class="price"><p><span>0</span><sup>đ</sup></p></td>
+                                        <td><input id="count" style="width: 40px;" type="number" value="1" min="0"></td>
                                         <td style="cursor: pointer;">Xóa</td>
-                                    </tr> -->
+                                    </tr>
                                 </tbody>
                             </table>
                             <div class="price-total">
@@ -127,5 +127,21 @@
         </div>
     </div>
     <script src="./product.js"></script>
+    <script>
+        var name = localStorage.getItem('name')
+        var price = localStorage.getItem('price')
+        var count = localStorage.getItem('value')
+        var img = localStorage.getItem('img')
+        var total = localStorage.getItem('totalBill')
+        console.log(name, price, count, img, total)
+        document.getElementById('count').value = count
+        var prices = document.querySelector('.price span')
+            prices.innerHTML = price.toLocaleString()
+        document.querySelector('img').getElementsByClassName('cart-img').src = img
+        var title = document.querySelector('.title-product p')
+            title.innerHTML = name.toLocaleString()
+        var totalBill = document.querySelector('.price-total span')
+            totalBill.innerHTML = total.toLocaleString('de-DE')    
+    </script>
 </body>
 </html>
