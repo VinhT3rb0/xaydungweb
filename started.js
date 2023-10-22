@@ -1,5 +1,4 @@
 window.addEventListener("load", function() {
-    const slider = document.querySelector(".slider");
     const sliderMain = document.querySelector(".slider-main");
     const nextBtn = document.querySelector(".icon-slider-right");
     const prevBtn = document.querySelector(".icon-slider-left");

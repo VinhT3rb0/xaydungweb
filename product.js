@@ -130,9 +130,6 @@ function inputChange() {
         })
     }
 }
-const productInfo = {
-    
-}
 
 console.log(productInfo.img);
 console.log(productInfo.count);
