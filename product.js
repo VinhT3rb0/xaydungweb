@@ -33,7 +33,6 @@ var valueProduct = parseFloat(document.getElementById('value-product').value);
         showLogin.addEventListener('click',showLogins)
         modalClose.addEventListener('click',hideLogins)
         modalLoginOut.addEventListener('click',hideLogins)
-        modal.addEventListener('click',hideLogins)
 
 
         // mở giỏ hàng
@@ -129,9 +128,6 @@ function inputChange() {
             cartTotal()
         })
     }
-}
-const productInfo = {
-    
 }
 
 console.log(productInfo.img);

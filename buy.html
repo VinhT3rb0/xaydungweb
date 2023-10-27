@@ -62,6 +62,7 @@
 
                                         <th>Sản phẩm</th>
                                         <th>Giá</th>
+                                        <th>Đơn giá</th>
                                         <th>SL</th>
                                         <th>Chọn</th>
                                     </tr>
@@ -69,9 +70,10 @@
                                 <tbody>
                                     <tr>
                                         <td class="title-product" style="display: flex; flex-direction: column;align-items: center; width: 100px;"><img class="cart-img" id="pic" src="" alt=""><p></p></td>
-                                        <td class="price"><p><span>0</span><sup>đ</sup></p></td>
+                                        <td class="price"><p><span>0</span><sup></sup></p></td>
+                                        <td class="dongia"><span>VNĐ</span></td>
                                         <td><input id="count" style="width: 40px;" type="number" value="1" min="0"></td>
-                                        <td style="cursor: pointer;">Xóa</td>
+                                        <td class="cart-del" style="cursor: pointer;">Xóa</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -128,20 +130,43 @@
     </div>
     <script src="./product.js"></script>
     <script>
-        var name = localStorage.getItem('name')
-        var price = localStorage.getItem('price')
-        var count = localStorage.getItem('value')
-        var img = localStorage.getItem('img')
-        var total = localStorage.getItem('totalBill')
-        console.log(name, price, count, img, total)
-        document.getElementById('count').value = count
-        var prices = document.querySelector('.price span')
-            prices.innerHTML = price.toLocaleString()
-        document.getElementsByClassName('cart-img').src = img
-        var title = document.querySelector('.title-product p')
-            title.innerHTML = name.toLocaleString()
-        var totalBill = document.querySelector('.price-total span')
-            totalBill.innerHTML = total.toLocaleString('de-DE')    
+            var delCart = document.querySelector('.cart-del')
+            var name = localStorage.getItem('name')
+            var price = localStorage.getItem('price')
+            var count = localStorage.getItem('value')
+            var img = localStorage.getItem('img')
+            var total = localStorage.getItem('totalBill')
+            document.getElementById('count').value = count
+            var prices = document.querySelector('.price span')
+                prices.innerHTML = price.toLocaleString()
+            document.querySelector('img').getElementsByClassName('cart-img').src = img
+            var title = document.querySelector('.title-product p')
+                title.innerHTML = name.toLocaleString()
+            var totalBill = document.querySelector('.price-total span')
+                totalBill.innerHTML = total.toLocaleString('de-DE')   
+            
+            delCart.addEventListener('click', deleteCart) 
+            function deleteCart() {
+            var cartItem =document.querySelectorAll("tbody tr")
+            for(var i=0;i<cartItem.length;i++) {
+                var productDelete = document.querySelectorAll('.cart-del')
+                productDelete[i].addEventListener('click',function(event) {
+                    var cartDelete = event.target
+                    var cartItemR = cartDelete.parentElement.parentElement
+                    cartItemR.remove()
+                    cartTotal()
+                })
+            }
+        }
+        function inputChange() {
+            var cartItem =document.querySelectorAll("tbody tr")
+            for(var i=0;i<cartItem.length;i++) {
+                var inputValue = cartItem[i].querySelector('input')
+                inputValue.addEventListener("change", function() {
+                    cartTotal()
+                })
+            }
+}
     </script>
 </body>
 </html>

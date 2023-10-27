@@ -98,9 +98,6 @@ iframe {
 .col-four {
     width: 25%;
 }
-.row {
-    padding: 15px 16px 50px 90px;
-}
 .clear-fix {
     display: block;
     clear: both;
@@ -270,6 +267,8 @@ input:focus{
 .main-content {
     margin-bottom: 30px;
     display: flex;
+    flex-direction: column-reverse;
+    padding: 15px 16px 50px 90px;
 }
 .form-header {
     padding-bottom: 9px;
